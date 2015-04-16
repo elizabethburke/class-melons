@@ -1,10 +1,11 @@
-"""This file should have our melon-type classes in it."""
 
-class MelonOrder(object):
+class AbstractMelonOrder(object):
+
     def get_base_price(self):
         return 5.0
 
-class WatermelonOrder(MelonOrder):
+
+class WatermelonOrder(AbstractMelonOrder):
     species = "Watermelon"
     color = "green"
     imported = False
@@ -21,7 +22,7 @@ class WatermelonOrder(MelonOrder):
 
         return total
 
-class CantaloupeOrder(MelonOrder):
+class CantaloupeOrder(AbstractMelonOrder):
     species = "Cantaloupe"
     color = "tan"
     imported = False
@@ -38,7 +39,7 @@ class CantaloupeOrder(MelonOrder):
         else:
             return total
 
-class CasabaOrder(MelonOrder):
+class CasabaOrder(AbstractMelonOrder):
     species = "Casaba"
     color = "green"
     imported = True
@@ -58,7 +59,7 @@ class CasabaOrder(MelonOrder):
 
         return total
 
-class SharlynOrder(MelonOrder):
+class SharlynOrder(AbstractMelonOrder):
     species = "Sharlyn"
     color = "tan"
     imported = True
@@ -75,7 +76,7 @@ class SharlynOrder(MelonOrder):
         
         return total
 
-class SantaClausOrder(MelonOrder):
+class SantaClausOrder(AbstractMelonOrder):
     species = "Santa Claus"
     color = "green"
     imported = True
@@ -92,7 +93,7 @@ class SantaClausOrder(MelonOrder):
         
         return total
 
-class ChristmasOrder(MelonOrder):
+class ChristmasOrder(AbstractMelonOrder):
     species = "Christmas"
     color = "green"
     imported = False
@@ -106,7 +107,7 @@ class ChristmasOrder(MelonOrder):
 
         return total
 
-class HornedMelonOrder(MelonOrder):
+class HornedMelonOrder(AbstractMelonOrder):
     species = "HornedMelon"
     color = "yellow"
     imported = True
@@ -123,7 +124,7 @@ class HornedMelonOrder(MelonOrder):
         
         return total
 
-class XiguaOrder(MelonOrder):
+class XiguaOrder(AbstractMelonOrder):
     species = "Xigua"
     color = "black"
     imported = True
@@ -143,7 +144,7 @@ class XiguaOrder(MelonOrder):
         
         return total
 
-class OgenOrder(MelonOrder):
+class OgenOrder(AbstractMelonOrder):
     species = "Ogen"
     color = "tan"
     imported = False
