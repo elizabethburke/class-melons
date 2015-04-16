@@ -17,7 +17,7 @@ class WatermelonOrder(MelonOrder):
         total = self.get_base_price() * qty
 
         if qty >= 3:
-            total = total*0.75
+            total = total * 0.75
 
         return total
 
@@ -32,8 +32,9 @@ class CantaloupeOrder(MelonOrder):
         """Calculate price, given a number of melons ordered."""
 
         total = self.get_base_price() * qty
+        
         if qty >= 5:
-            return total * .5
+            return total * 0.5
         else:
             return total
 
@@ -47,8 +48,8 @@ class CasabaOrder(MelonOrder):
 
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
-        if self.species in ['Casaba','Ogen']:
-            price = self.get_base_price() + 1        
+
+        price = self.get_base_price() + 1        
 
         total = price * qty
 
@@ -71,6 +72,7 @@ class SharlynOrder(MelonOrder):
 
         if self.imported == True:
             total = total * 1.5
+        
         return total
 
 class SantaClausOrder(MelonOrder):
@@ -87,6 +89,7 @@ class SantaClausOrder(MelonOrder):
 
         if self.imported == True:
             total = total * 1.5
+        
         return total
 
 class ChristmasOrder(MelonOrder):
@@ -117,6 +120,7 @@ class HornedMelonOrder(MelonOrder):
 
         if self.imported == True:
             total = total * 1.5
+        
         return total
 
 class XiguaOrder(MelonOrder):
@@ -136,6 +140,7 @@ class XiguaOrder(MelonOrder):
 
         if self.imported == True:
             total = total * 1.5
+        
         return total
 
 class OgenOrder(MelonOrder):
@@ -148,9 +153,8 @@ class OgenOrder(MelonOrder):
     def get_price(self, qty):
         """Calculate price, given a number of melons ordered."""
 
-        if self.species in ['Casaba','Ogen']:
-            price = self.get_base_price() + 1        
-
+        price = self.get_base_price() + 1        
+        
         total = price * qty
 
         return total
